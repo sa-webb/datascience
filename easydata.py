@@ -10,4 +10,4 @@ print(test_array[0])
 column1 = test_array['Column1']
 
 print(column1.values)
-print(column1.mean)
+print(column1.mean())
