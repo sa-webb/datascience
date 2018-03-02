@@ -17,7 +17,6 @@ for i in range(0,n_columns):
 column1_input = user[0]
 column2_input = user[1]
 
-
 # Using pandas to get columns
 column1 = data[column1_input]
 column2 = data[column2_input]
@@ -25,8 +24,14 @@ column2 = data[column2_input]
 print("column1 ",column1.values)
 print("column2 ",column2.values)
 
-column1_mean = column1.mean()
-column2_mean = column2.mean()
+print("Available operations: mean")
 
-print("mean: ", column1_mean)
-print("mean: ", column2_mean)
+operation = input('Specify operation')
+if(operation == 'mean '):
+    column1_mean = column1.mean()
+    print("mean: ", column1_mean)
+else:
+    print("failed")
+
+# column2_mean = column2.mean()
+# print("mean: ", column2_mean)
