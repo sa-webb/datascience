@@ -1,5 +1,4 @@
-The manual for auto-sklearn 
-https://automl.github.io/auto-sklearn/stable/manual.html
+# auto-sklearn is an automated machine learning toolkit and a drop-in replacement for a scikit-learn estimator:
 
 Includes: 
 Holdout
