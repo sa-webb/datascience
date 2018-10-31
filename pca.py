@@ -1,5 +1,3 @@
-
-# https://towardsdatascience.com/pca-using-python-scikit-learn-e653f8989e60
 import pandas as pd 
 import numpy as np 
 import matplotlib.pyplot as plt 
@@ -8,22 +6,22 @@ from sklearn.preprocessing import StandardScaler
 
 url = "https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data"
 
-# All data as a DataFrame 
+# Capturing the data into a Pandas dataframe
 df = pd.read_csv(url, names=['sepal length','sepal width','petal length','petal width','target'])
-# Getting column names 
+# Simple display of feature columns 
 print(df.columns)
 
 # Feature array
 features = ['sepal length', 'sepal width', 'petal length', 'petal width']
 # Separating out the features
 x = df.loc[:, features].values
-# Separating out the target
+# Defining the target column 
 y = df.loc[:,['target']].values
 # Standardizing the features
 x = StandardScaler().fit_transform(x)
 
 
-# PCA 3 compononent
+# Fitting PCA 3 compononent
 pca3 = PCA(n_components=3)
 pComponents = pca3.fit_transform(x)
 pDf = pd.DataFrame(data = pComponents, 
@@ -31,7 +29,7 @@ pDf = pd.DataFrame(data = pComponents,
 finalDff = pd.concat([pDf, df [['target']]], axis = 1)
 print(finalDff.head())
 
-# PCA 2 component
+# Fitting PCA 2 component
 pca = PCA(n_components=2)
 principalComponents = pca.fit_transform(x)
 principalDf = pd.DataFrame(data = principalComponents
@@ -39,7 +37,7 @@ principalDf = pd.DataFrame(data = principalComponents
 finalDf = pd.concat([principalDf, df[['target']]], axis = 1)
 print(finalDf.head())
 
-# Plotting PCA 2 componenet 
+# Plotting PCA 2 component 
 fig = plt.figure(figsize = (8,8))
 ax = fig.add_subplot(1,1,1) 
 ax.set_xlabel('Principal Component 1', fontsize = 15)
