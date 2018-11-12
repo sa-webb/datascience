@@ -1,12 +1,5 @@
-# /enter/directory 
 """
-Submission requirement:
-
-1) Python 3.6.4 |Anaconda, Inc.| [GCC 7.2.0] on linux
-2) Pandas, numpy, and scipy.stats
-3) For both questions a and b, provide the solution steps, commented code, and
-intermediate and final computation results in a MS word file, and upload the
-file to UTCLearn.
+Python 3.6.4 |Anaconda, Inc.| [GCC 7.2.0] on linux
 """
 __author__ = "Austin Webb"
 __contact__ = "tsm792@mocs.utc.edu"
